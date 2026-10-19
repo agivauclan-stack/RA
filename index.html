@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Réalité Augmentée</title>
-  <!-- Importation du moteur WebAR de Google -->
+  <title>Réalité Augmentée - Bouteille</title>
+  <!-- Script officiel du lecteur 3D de Google -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { width: 100vw; height: 100vh; overflow: hidden; background-color: #f4f4f9; font-family: sans-serif; }
+    body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #111; overflow: hidden; }
     model-viewer { width: 100%; height: 100%; }
   </style>
 </head>
 <body>
 
-  <!-- Composant 3D gérant Android (.glb) et iOS (.usdz) -->
+  <!-- Lecteur WebAR universel -->
   <model-viewer 
-    src="bouteille.glb" 
+    src="https://raw.githubusercontent.com/agivauclan-stack/RA/main/bouteille.glb"
     ios-src="bouteille.usdz"
-    alt="Bouteille d'eau 1.5L" 
-    ar 
-    ar-modes="webxr scene-viewer quick-look" 
-    camera-controls 
-    auto-rotate 
-    shadow-intensity="1">
+    alt="Bouteille d'eau scannée"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    auto-rotate>
   </model-viewer>
 
 </body>
