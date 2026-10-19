@@ -2,12 +2,29 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Test GitHub Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Réalité Augmentée</title>
+  <!-- Importation du moteur WebAR de Google -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 100vw; height: 100vh; overflow: hidden; background-color: #f4f4f9; font-family: sans-serif; }
+    model-viewer { width: 100%; height: 100%; }
+  </style>
 </head>
-<body style="background-color: #282c34; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; margin: 0;">
-  <div style="text-align: center;">
-    <h1>Le site fonctionne !</h1>
-    <p>Cette page confirme que GitHub Pages affiche correctement le fichier index.html.</p>
-  </div>
+<body>
+
+  <!-- Composant 3D gérant Android (.glb) et iOS (.usdz) -->
+  <model-viewer 
+    src="bouteille.glb" 
+    ios-src="bouteille.usdz"
+    alt="Bouteille d'eau 1.5L" 
+    ar 
+    ar-modes="webxr scene-viewer quick-look" 
+    camera-controls 
+    auto-rotate 
+    shadow-intensity="1">
+  </model-viewer>
+
 </body>
 </html>
